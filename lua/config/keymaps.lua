@@ -47,3 +47,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- nvim go related
 vim.keymap.set("n", "<leader>gt", "<cmd>GoTest<CR>", { desc = "Go Test" })
+
+-- Seave file as root
+vim.keymap.set("n", ":W", ":w !sudo tee >/dev/null %:p:S")
