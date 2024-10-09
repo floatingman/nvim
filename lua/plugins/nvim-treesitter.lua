@@ -25,10 +25,10 @@ local config = function()
 			"markdown",
 			"bash",
 			"go",
-            "gomod",
-            "gosum",
-            "terraform",
-            "lua",
+			"gomod",
+			"gosum",
+			"terraform",
+			"lua",
 			"dockerfile",
 			"solidity",
 			"gitignore",
@@ -57,5 +57,10 @@ end
 return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,
+	init = function()
+		-- This option is required.
+		vim.g["chezmoi#use_tmp_buffer"] = true
+		-- add other options here if needed.
+	end,
 	config = config,
 }
